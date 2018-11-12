@@ -8,10 +8,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
+
+import static database.DatabaseConfiguration.getSession;
 
 /**
  * Created by Ryan Alexander on 07/11/2018.
@@ -23,6 +23,9 @@ public class StudentListServlet extends HttpServlet {
 
         // retrieve all the attributes from studentsDatabase
         List<Student> students = studentsDatabase.getStudents();
+
+        // how to retrieve data from Hibernate database
+        //Student load = getSession().load(Student.class, "data-retrieved-from-database");
 
         req.setAttribute("students", students);
 

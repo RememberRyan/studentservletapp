@@ -81,7 +81,7 @@
                     </div>
                     <div class="form-group ">
                         <label class="control-label requiredField" for="studentGroup">
-                            Select a Choice
+                            Form Group
                             <span class="asteriskField">
         *
        </span>
@@ -114,7 +114,7 @@
                     </div>
                     <div class="form-group ">
                         <label class="control-label " for="grade">
-                            Select a Choice
+                            Grade attained
                         </label>
                         <select class="select form-control" id="grade" name="grade">
                             <option selected="selected" value="">

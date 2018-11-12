@@ -1,5 +1,6 @@
 package servlets;
 
+import dto.Student;
 import model.StudentsDatabase;
 
 import javax.servlet.RequestDispatcher;
@@ -8,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static database.DatabaseConfiguration.getSession;
 
 /**
  * Created by Ryan Alexander on 07/11/2018.
@@ -28,8 +31,11 @@ public class AddStudentServlet extends HttpServlet {
         String studentID = (String) req.getParameter("studentID");
         String grade = (String) req.getParameter("grade");
 
-        // stores the new data
+        // stores the new data (temporary store)
         StudentsDatabase studentsDatabase = StudentsDatabase.getInstance();
         studentsDatabase.addNewStudent(userName, surname, studentGroup, studentID, grade);
+
+        // how to save data to Hibernate database
+        //getSession().save(new Student(userName, surname, studentGroup, studentID, grade));
     }
 }

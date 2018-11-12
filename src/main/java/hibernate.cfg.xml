@@ -1,0 +1,61 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name = "hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <property name = "hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+
+        <property name = "hibernate.connection.url">
+            jdbc:mysql://localhost:3306/jolantacoursemanagement?serverTimezone=UTC
+        </property>
+
+        <property name = "hibernate.connection.username">
+            root
+        </property>
+
+        <property name = "hibernate.connection.password">
+            A33s{2t@
+        </property>
+
+        <property name = "hibernate.hbm2ddl.auto">
+            update
+        </property>
+
+        <mapping class = "database.models.Address"/>
+        <mapping class = "database.models.Course"/>
+        <mapping class = "database.models.HomeGroup"/>
+        <mapping class = "database.models.Payments"/>
+        <mapping class = "database.models.Room"/>
+        <mapping class = "database.models.Schedule"/>
+        <mapping class = "database.models.Student"/>
+        <mapping class = "database.models.StudentGroup"/>
+
+    </session-factory>
+</hibernate-configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
