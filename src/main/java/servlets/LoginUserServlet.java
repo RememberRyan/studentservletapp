@@ -23,7 +23,8 @@
 //
 //        if(password.equals("getThePasswordFromJDBC_Connection")){
 //            HttpSession session = req.getSession();
-//            session.setAttribute("sessionkey", "generated-G2slkgjljLKekljs39");
+//            session.setAttribute("sessionKey", "random-string-generated-G2slkgjljLKekljs39");
+//            // save the generated string to the DB, because this servlet is on the server
 //            PrintWriter writer = resp.getWriter();
 //            writer.println("Welcome " + student.getName);
 //            return;

@@ -38,11 +38,13 @@ public class StudentListServlet extends HttpServlet {
 //            String sessionKey = (String) session.getAttribute("sessionKey");
 //            if (sessionKey != null && sessionKey.equals("random-string")) {
 //                req.setAttribute("names", asList("Vitya", "Barack"));
-//                RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/user.jsp");
+//                RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/students.jsp");
 //                requestDispatcher.forward(req, resp);
 //                return;
 //            }
 //        }
+//
+//        //Writing to the browser what the user sees
 //        PrintWriter writer = resp.getWriter();
 //        writer.println("You can't view this page. Please go to login - http://localhost:8080/login");
 //
