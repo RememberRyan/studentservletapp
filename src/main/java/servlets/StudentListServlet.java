@@ -24,10 +24,12 @@ public class StudentListServlet extends HttpServlet {
         // retrieve all the attributes from studentsDatabase
         List<Student> students = studentsDatabase.getStudents();
 
-        // how to retrieve data from Hibernate database
-        //Student load = getSession().load(Student.class, "data-retrieved-from-database");
 
-        req.setAttribute("students", students);
+        // how to retrieve data from Hibernate database
+        List<Student> students1 = getSession().createCriteria(Student.class).list();
+
+
+        req.setAttribute("students", students1);
 
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/students.jsp");
         requestDispatcher.forward(req,resp);

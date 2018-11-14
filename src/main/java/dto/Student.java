@@ -1,21 +1,37 @@
 package dto;
 
+import javax.persistence.*;
+import java.sql.Date;
+
 /**
  * Created by Ryan Alexander on 06/11/2018.
  */
+@Entity
+@Table(name = "student")
 public class Student {
+    @Column(name = "name")
     private String name;
+    @Column(name = "surname")
     private String surname;
-    private String studentGroup;
-    private String studentID;
-    private String grade;
+    @Id
+    @Column(name = "id")
+    //https://stackoverflow.com/a/10997869
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Long studentID;
+    @Column(name = "Dob")
+    private Date dateOfBirth;
+    @Column (name = "nationality")
+    private String nationality;
 
-    public Student(String name, String surname, String studentGroup, String studentID, String grade) {
+    public Student() {
+    }
+
+    public Student(String name, String surname, Date dateOfBirth, String nationality) {
         this.name = name;
         this.surname = surname;
-        this.studentGroup = studentGroup;
         this.studentID = studentID;
-        this.grade = grade;
+        this.dateOfBirth = dateOfBirth;
+        this.nationality = nationality;
     }
 
     public String getName() {
@@ -26,10 +42,6 @@ public class Student {
         this.name = name;
     }
 
-    public Student(String studentID) {
-        this.studentID = studentID;
-    }
-
     public String getSurname() {
         return surname;
     }
@@ -38,25 +50,27 @@ public class Student {
         this.surname = surname;
     }
 
-    public String getStudentGroup() {
-        return studentGroup;
-    }
-
-    public void setStudentGroup(String studentGroup) {
-        this.studentGroup = studentGroup;
-    }
-
-    public String getGrade() {
-        return grade;
-    }
-
-    public void setGrade(String grade) {
-        this.grade = grade;
-    }
-
-    public String getStudentID() {
+    public Long getStudentID() {
         return studentID;
     }
 
+    public void setStudentID(Long studentID) {
+        this.studentID = studentID;
+    }
 
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
 }

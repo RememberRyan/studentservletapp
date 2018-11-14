@@ -28,14 +28,14 @@
             update
         </property>
 
-        <mapping class = "database.models.Address"/>
-        <mapping class = "database.models.Course"/>
-        <mapping class = "database.models.HomeGroup"/>
-        <mapping class = "database.models.Payments"/>
-        <mapping class = "database.models.Room"/>
-        <mapping class = "database.models.Schedule"/>
-        <mapping class = "database.models.Student"/>
-        <mapping class = "database.models.StudentGroup"/>
+        <!--<mapping class = "database.models.Address"/>-->
+        <!--<mapping class = "database.models.Course"/>-->
+        <!--<mapping class = "database.models.HomeGroup"/>-->
+        <!--<mapping class = "database.models.Payments"/>-->
+        <!--<mapping class = "database.models.Room"/>-->
+        <!--<mapping class = "database.models.Schedule"/>-->
+        <!--<mapping class = "database.models.StudentGroup"/>-->
+        <mapping class = "dto.Student"/>
 
     </session-factory>
 </hibernate-configuration>

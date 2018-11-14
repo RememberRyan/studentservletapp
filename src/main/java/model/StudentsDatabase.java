@@ -19,9 +19,9 @@ public class StudentsDatabase {
     public static StudentsDatabase getInstance() {
         if (studentsDatabase == null) {
             studentsDatabase = new StudentsDatabase();
-            studentsDatabase.addNewStudent("Barack","Flacka Flames", "7G", "001", "C");
-            studentsDatabase.addNewStudent("Donald","Duck", "7F","002", "F");
-            studentsDatabase.addNewStudent("George","St. Pierre","7G","003", "A");
+            studentsDatabase.addNewStudent("Barack","Flacka Flames", "001", "Andorra", "10/09/1974");
+            studentsDatabase.addNewStudent("Donald","Duck", "002","France", "10/09/1980");
+            studentsDatabase.addNewStudent("George","St. Pierre","003","Denmark", "10/09/1924");
         }
         return studentsDatabase;
     }
@@ -45,9 +45,9 @@ public class StudentsDatabase {
     public void addNewStudent(
             String name,
             String surname,
-            String studentGroup,
             String studentID,
-            String grade) {
-        students.add(new Student(name,surname,studentGroup,studentID,grade));
+            String nationality,
+            String dateOfBirth) {
+        //students.add(new Student(name,surname,nationality,studentID,dateOfBirth));
     }
 }

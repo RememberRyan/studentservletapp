@@ -45,7 +45,7 @@
     Collections.sort(students, new Comparator<Student>() {
         @Override
         public int compare(Student o1, Student o2) {
-            return o1.getGrade().compareTo(o2.getGrade());
+            return o1.getNationality().compareTo(o2.getNationality());
         }
     });
 
@@ -57,9 +57,9 @@
     for (Student student : students) {
         out.println(
                 student.getName() + " " + student.getSurname() + " "
-                + student.getStudentGroup() + " "
+                + student.getDateOfBirth().toString() + " "
                 + student.getStudentID() + " "
-                + student.getGrade() + "<br />");
+                + student.getNationality() + "<br />");
     }
 
 
@@ -67,21 +67,21 @@
     // https://www.tablesgenerator.com/html_tables
     out.println("<br />" + "<br />" + "<br />" +
             "<table>" +
-            "<caption>Students Grades</caption>" +
+            "<caption>Students Grades - Ordered by Nationality</caption>" +
                     "<tr>" +
-                    "<th>StudentID</th>" +
-                    "<th>Name</th>" +
+                    "<th>Student ID</th>" +
+                    "<th>First Name</th>" +
                     "<th>Surname</th>" +
-                    "<th>Group</th>" +
-                    "<th>Grade</th>" +
+                    "<th>Date of birth</th>" +
+                    "<th>Nationality</th>" +
                     "</tr>");
     for (Student student : students) {
         out.println("<tr>" +
                 "<td>" + student.getStudentID() + "</td>"
                 + "<td>" + student.getName() + "</td>"
                 + "<td>" + student.getSurname() + "</td>"
-                + "<td>" + student.getStudentGroup() + "</td>"
-                + "<td>" + student.getGrade() + "</td>" + "</tr>")
+                + "<td>" + student.getDateOfBirth().toString() + "</td>"
+                + "<td>" + student.getNationality() + "</td>" + "</tr>")
         ;
     }
     out.println(
