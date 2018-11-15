@@ -55,6 +55,9 @@ public class AddStudentServlet extends HttpServlet {
         session.getTransaction().commit();
         session.close();
 
+        // redirects to url after form 'submit' button
+        resp.sendRedirect("/list");
+
 
         // stores the new data (temporary store)
         //StudentsDatabase studentsDatabase = StudentsDatabase.getInstance();
